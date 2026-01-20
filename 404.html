@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#ec4899',
+                        darkBg: '#0f172a',
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cookie-slide-in {
+            animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col overflow-x-hidden">
+
+    <nav class="sticky top-0 z-50 glass shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="/">
+                    <div class="flex items-center gap-2">
+                        <span class="font-extrabold text-xl tracking-tight">MD5 Hash <span
+                                class="text-primary">Generator</span></span>
+                    </div>
+                </a>
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all">
+                    <i class="fa-solid fa-moon text-xl" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+            <h1 class="text-8xl sm:text-9xl font-black mb-4">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">404</span>
+            </h1>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6">Page Not Found</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-10 max-w-md mx-auto">
+                Oops! The page you're looking for has been moved or doesn't exist.
+            </p>
+            <a href="/"
+                class="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-xl hover:shadow-lg hover:shadow-indigo-500/25 transition-all active:scale-95">
+                <i class="fa-solid fa-house"></i> Back to Homepage
+            </a>
+        </div>
+    </main>
+
+    <footer
+        class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pt-10 pb-6 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="/">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="font-bold text-lg text-gray-900 dark:text-white">MD5 Hash <span
+                                    class="text-primary">Generator</span></span>
+                        </div>
+                    </a>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm max-w-xs">
+                        Professional, fast, and secure hashing tools for developers and security enthusiasts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a href="https://pvdspot.com/privacy-policy.html"
+                                class="hover:text-primary transition">Privacy Policy</a></li>
+                        <li><a href="https://pvdspot.com/terms-of-use.html" class="hover:text-primary transition">Terms
+                                of Use</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">About</h4>
+                    <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a href="https://pvdspot.com/about-us.html" class="hover:text-primary transition">About
+                                Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-6 text-center">
+                <p class="text-sm text-gray-400">©
+                    <script>document.write(new Date().getFullYear())</script> MD5 Hash Generator. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-notice" class="fixed bottom-6 left-6 right-6 z-[100] hidden">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="glass dark:bg-gray-800/95 p-4 sm:p-6 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-primary/30 cookie-slide-in">
+                <div class="flex items-center gap-5 text-left">
+                    <div
+                        class="bg-gradient-to-br from-primary to-secondary p-3 rounded-xl text-white shadow-lg hidden sm:block">
+                        <i class="fa-solid fa-cookie-bite text-2xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-gray-900 dark:text-white">Cookie Preferences</h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            We use cookies to improve your browsing experience and analyze our traffic. By clicking
+                            <b>Accept All</b>, you consent to our use of cookies.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-3 w-full md:w-auto">
+                    <button id="accept-cookie"
+                        class="flex-1 md:flex-none whitespace-nowrap px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-xl hover:shadow-xl transition-all active:scale-95 shadow-lg">
+                        Accept All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        function initTheme() {
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                html.classList.remove('dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+        initTheme();
+
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.theme = isDark ? 'dark' : 'light';
+            isDark ? themeIcon.classList.replace('fa-moon', 'fa-sun') : themeIcon.classList.replace('fa-sun', 'fa-moon');
+        });
+
+        const cookieNotice = document.getElementById('cookie-notice');
+        const acceptCookieBtn = document.getElementById('accept-cookie');
+
+        window.addEventListener('load', () => {
+            if (!localStorage.getItem('cookieAccepted')) {
+                setTimeout(() => {
+                    cookieNotice.classList.remove('hidden');
+                }, 800);
+            }
+        });
+
+        acceptCookieBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieAccepted', 'true');
+            cookieNotice.classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
