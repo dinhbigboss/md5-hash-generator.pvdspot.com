@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://md5-hash-generator.pvdspot.com/sitemap.xml
