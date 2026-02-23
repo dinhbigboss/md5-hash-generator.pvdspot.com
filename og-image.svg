@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg-grad)" />
+  
+  <g transform="translate(480, 110)">
+    <rect width="240" height="240" rx="60" fill="url(#logo-grad)" />
+    <path d="M75 120h90 M120 75v90" stroke="white" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <text x="600" y="430" font-family="Inter, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle">MD5 Hash Generator</text>
+  <text x="600" y="490" font-family="Inter, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">Secure • Fast • Instant Conversion</text>
+</svg>
